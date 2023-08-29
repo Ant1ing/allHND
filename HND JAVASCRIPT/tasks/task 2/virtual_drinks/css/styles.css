@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: rgba(239, 240, 240, 0.447);
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-image: radial-gradient(rgba(99, 156, 231, 0.5),
+            rgb(114, 133, 232))
+}
+
+#drinkMenu,
+#footer {
+    width: 75%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgb(36, 119, 214);
+}
+
+h2 {
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 6rem;
+    color: #0d54a0;
+}
+
+h3 {
+    font-family: "poppins";
+    font-weight: 300;
+    font-size: 3rem;
+    color: rgb(227, 235, 244);
+}
+
+#selection {
+    padding: .75rem;
+    font-family: 'poppins';
+}
+
+#selection2 {
+    padding: .75rem;
+    font-family: 'poppins';
+}
+
+#sugar,
+#milk {
+    margin: 10px 0px;
+    width: 30px;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: 1px solid rgb(170, 170, 170)
+}
+
+label {
+    display: inline-block;
+    width: 190px;
+    font-family: 'poppins';
+    font-size: 16px;
+    font-weight: 400;
+    color: #100c6a;
+}
+
+#btn {
+    padding: .75rem;
+    font-family: 'poppins';
+    font-weight: 300;
+    background-color: rgba(189, 238, 126, 0.447);
+    color: #090735;
+    box-shadow: 0.5px .5px 5px rgba(0, 0, 0, .15);
+    border: 0;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: rgba(189, 238, 126, 0.824);
+    color: #021f40;
+}
+
+#drinkDetails, #imgDisplay {
+    font-family: "poppins";
+    font-weight: 300;
+    font-size: 2rem;
+}
