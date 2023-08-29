@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Target the DOM</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,800;1,100;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <section id="container">
+        <section id="dataPanel">
+
+            <div id="output">New text will be inserted here</div>
+
+            <p>This is paragraph 1</p>
+            <p class="changeCurrent">This is paragraph 2</p>
+            <p>This is paragraph 3</p>
+            <p class="changeCurrent">This is paragraph 4</p>
+            <p>This is paragraph 5</p>
+        </section>
+
+        <section id="btns">
+            <!-- Buttons that call the functions using onclick -->
+            <button class="btn" onclick="changeText()">Display New Text</button>
+
+            <button class="btn" onclick="changeTextColor()">Change Text Color</button>
+
+            <button class="btn" onclick="changeMultiple()">Change Multiple Properties</button>
+
+            <button class="btn" onclick="selectAll()">Select All P tags</button>
+
+            <button class="btn" onclick="changeFirst()">Change First</button>
+
+            <button class="btn" onclick="changeByClass()">Change By Class</button>
+
+            <button class="btn" onclick="resetAll()">Reset All</button>
+            
+            <button class="btn" onclick="changeBackgroundColor()">Change Background Colour</button>
+        </section>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

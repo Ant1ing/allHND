@@ -1,0 +1,51 @@
+#container {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+#dataPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 70vh;
+    margin: 3rem 0 0 0;
+    background-color: rgb(249, 248, 247);
+    border: 1px solid rgba(0, 98, 255, 0.453);
+}
+
+.btn {
+    width: 250px;
+    padding: 1.5rem 0rem;
+    margin: 2rem 0;
+    letter-spacing: 2px;
+    border: 0;
+    background-color: rgb(4, 55, 121);
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(215, 216, 217);
+    color: rgb(54, 53, 53);
+}
+
+#output {
+    font-family: "poppins";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #5a97dc;
+}
+
+p {
+    margin: 0px 0 10px 0;
+    font-family: "poppins";
+    font-weight: 300;
+    font-size: 2rem;
+    color: rgb(129, 104, 47);
+}

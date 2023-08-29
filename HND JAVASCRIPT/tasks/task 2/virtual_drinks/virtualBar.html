@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Drinks Bar</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,800;1,100;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <section id="header">
+
+        <h2>Virtual Drinks Bar</h2>
+        <h3>Select a Drink - Enter How Many Sugar & Milk</h3>
+
+    </section>
+
+    <section id="drinkMenu">
+        <!--form used to select virtual drink-->
+        <form id="myform">
+            <select id="selection">
+                <option value="">Choose Drink...</option>
+                <option value="Tea">Tea</option>
+                <option value="Coffee">Coffee</option>
+                <option value="Earl Grey">Earl Grey</option>
+            </select><br />
+            <select id="selection2">
+                <option value="">sitting in or taking away?</option>
+                <option value="Sit In">Sit In</option>
+                <option value="Take Out">Take Away</option>
+            </select><br />
+            <label for="sugar">How many Sugar(s):</label>
+            <input type="text" name="sugar" id="sugar"><br />
+            <label for="milk">How much Milk(%):</label>
+            <input type="text" name="milk" id="milk"><br />
+
+            <!--button that when clicked calls the "selectDrink()" 
+        function and passes the value stored in the drop down 
+        menu above with the id of selection-->
+            <button type="button" id="btn" onclick="selectDrink(document.getElementById('selection').value)">CollectYourDrink</button>
+        </form>
+    </section>
+
+    <section id="footer">
+        <!-- the type of drink, sugar & milk content will be set here-->
+        <p id="drinkDetails">Your Drink Details Will Appear Here...</p>
+
+        <!-- image displaying the correct drink selected displays here-->
+        <p id="imgDisplay">The Image Will Display Here...</p>
+    </section>
+
+    <script src="js/bar_script.js"></script>
+</body>
+
+</html>

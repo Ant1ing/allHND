@@ -1,0 +1,29 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Passing value on Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,800;1,100;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h2>Paramater Passing</h2>
+    <section id="container">
+        <!--Create a box that collects user input-->
+        <label for "userinput">Userinput:</label>
+        <input type="text" id="userinput">
+        <!--retrieve the value from the user input box and pass the value to the function called paramPass-->
+        <button type="button" id="btn" onclick="paramPass(document.getElementById('userinput').value)">Pass Parameter</button>
+        <!--Paragraph tag will dislay the value passed-->
+
+    </section>
+    <p id="output">User Output appears here....</p>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
