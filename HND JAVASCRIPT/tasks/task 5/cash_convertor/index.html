@@ -1,0 +1,42 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,800;1,100;1,900&display=swap"
+        rel="stylesheet">
+    <title>Cash Convertor</title>
+</head>
+
+<body>
+    <h2><span>CASH</span> CONVERTOR</h2>
+    <div id="wrapper">
+
+        <div id="wrapform">
+            <!--FORM & INPUT FIELDS-->
+            <form id="testForm" action="#">
+                <label for="pounds">ENTER £'S:</label>
+                <input type="text" name="pounds" id="pounds">
+                <label for="selection"></label>
+                <!--dropdown calls passSymbol & uses 'this' keyword to pass value-->
+                <select id="selection">
+                    <option selected hidden>choose currency</option>
+                    <option value="euros">Euros(€)</option>
+                    <option value="$">Dollars($)</option>
+                </select>
+                <input type="text" name="converted" id="converted">
+                <label for="converted" class="converted">CONVERTED</label>
+                <br>
+                <br>
+                <!--button calls clearFields function-->
+                <button type="button" id="btn">RESET ALL</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/con_script.js"></script>
+</body>
+
+</html>

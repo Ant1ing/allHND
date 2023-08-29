@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,800;1,100;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Log In Denied</title>
+</head>
+
+<body>
+    <h2 class="loggedIn">Log In <span class="denied">Denied</span></h2>
+    <h3>Something Went Wrong With the Details you Entered</h3>
+    <div class="btn_center"><button id="btn_back">TRY AGAIN</button></div>
+
+    <script>
+        let backTologOn = document.getElementById('btn_back');
+        backTologOn.addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>

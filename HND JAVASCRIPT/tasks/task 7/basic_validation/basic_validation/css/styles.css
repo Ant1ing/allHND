@@ -1,0 +1,90 @@
+#inputs {
+    width: 80%;
+    height: 50vh;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#uName,
+#pwd {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-family: 'poppins';
+    font-weight: 200;
+    font-size: 2rem;
+
+}
+
+#btn,
+#btn_back {
+    width: 200px;
+    padding: 1rem;
+    font-family: 'poppins';
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    background-color: #557ba5;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+}
+
+#btn:hover,
+#btn_back:hover {
+    background-color: #f0cc8c;
+    color: #000;
+}
+
+#btn_back {
+
+    margin: 0 auto;
+}
+
+span.error {
+    height: 20px;
+    font-family: 'poppins';
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(246, 115, 22);
+}
+
+.loggedIn,
+h3 {
+    margin: 7rem auto;
+    font-family: 'poppins';
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgb(144, 144, 144);
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.denied {
+    color: rgb(241, 22, 22);
+}
+
+.success {
+    font-weight: 300;
+    color: rgb(73, 241, 22);
+}
+
+.btn_center {
+
+    text-align: center;
+}
+
+h2 {
+
+    font-family: 'poppins';
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgb(144, 144, 144);
+}

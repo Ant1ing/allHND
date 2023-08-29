@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 75%;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4875a2;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 6rem;
+    font-family: "Poppins";
+    color: #4875a2;
+}
+
+span {
+    color: #97bde5;
+}
+
+#testForm {
+    text-align: center;
+}
+
+label {
+    margin-right: 1.3rem;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+label.converted {
+    margin-left: 20px;
+    letter-spacing: 2px;
+    ;
+    color: #c3f233;
+}
+
+input[type=text] {
+    width: 90px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: "Poppins";
+    font-weight: 400;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    text-align: center;
+
+}
+
+input[type=text]#converted {
+
+    background-color: #6ab64f;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+#selection {
+    width: 220px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: "Poppins";
+    border-radius: 5px;
+    border: solid 1px #ccc;
+}
+
+#pounds {
+    color: #78888e;
+}
+
+button {
+    width: 210px;
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-left: -40px;
+    font-family: 'poppins';
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    background-color: #7b90a7;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #97bde5;
+}
