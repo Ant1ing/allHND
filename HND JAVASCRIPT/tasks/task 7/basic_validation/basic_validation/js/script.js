@@ -7,7 +7,7 @@ function validate() {
     let pwd = document.getElementById('pwd');
 
     if (userName.value === '' && pwd.value === '') {
-        let error = document.querySelector('error');
+        let error = document.querySelector('.error');
         error.innerText = "The Fields Cant Be Empty";
 
     } else if (userName.value === 'admin' && Number (pwd.value) === 123) {
