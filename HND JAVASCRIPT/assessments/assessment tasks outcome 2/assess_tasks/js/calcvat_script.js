@@ -1,40 +1,53 @@
+// Wait for the HTML document to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-    // return all elements with a specific value so it can be used in the javascript
+    
+    // Get references to elements from the page
     const calcButton = document.getElementById('calcbtn');
     const resetButton = document.getElementById('reset');
     const amountInput = document.getElementById('amount');
     const vatInput = document.getElementById('vat');
     const totalInput = document.getElementById('total');
 
+    // Attach a click event to the 'Calculate VAT' button
     calcButton.addEventListener('click', function() {
         calculateVAT(amountInput.value);
     });
 
+    // Attach a click event to the 'Reset' button
     resetButton.addEventListener('click', function() {
         resetFields();
     });
 
-    // As shown below this function calculates the VAT of the amount by timesing the original amount by 0.22 and adding it to the initial amount to generate the grand total
+    /**
+     * Function to calculate the VAT and Grand Total.
+     * @param {string} amount - Amount input by the user.
+     */
     function calculateVAT(amount) {
+        // Set the VAT rate
         let vatRate = 0.22;
         
-        // Check if the input value is a number
+        // Validate the amount
         if(isNaN(amount) || amount.trim() === '') {
             alert('Please enter a valid amount.');
             return;
         }
         
+        // Calculate VAT and Grand Total
         let vatAmount = parseFloat(amount) * vatRate;
         let grandTotal = parseFloat(amount) + vatAmount;
 
+        // Update the input fields
         vatInput.value = vatAmount.toFixed(2);
         totalInput.value = grandTotal.toFixed(2);
     }
 
+    /**
+     * Function to reset all input fields.
+     */
     function resetFields() {
         let inputs = document.querySelectorAll('.details');
         
-        // Using a loop to clear all input fields with class 'details'
+        // Loop through each input and reset its value
         for(let input of inputs) {
             input.value = '';
         }
