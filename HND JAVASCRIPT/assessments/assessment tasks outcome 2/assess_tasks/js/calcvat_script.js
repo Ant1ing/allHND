@@ -41,9 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         totalInput.value = grandTotal.toFixed(2);
     }
 
-    /**
-     * Function to reset all input fields.
-     */
+    // Function to reset all input fields.
     function resetFields() {
         let inputs = document.querySelectorAll('.details');
         
