@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Set the VAT rate
         let vatRate = 0.22;
         
-        // Validate the amount
+        // Validate the amount to make sure its not left empty or an incorrect value was entered such as "four" instead of 4.
         if(isNaN(amount) || amount.trim() === '') {
             alert('Please enter a valid amount.');
             return;
