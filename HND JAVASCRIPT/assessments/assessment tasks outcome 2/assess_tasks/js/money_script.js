@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let num10p = Math.floor(amountInPence / 10);
 
         // Update the output paragraphs
-        output50.textContent = `Number of 50p coins: ${num50p}`;
-        output20.textContent = `Number of 20p coins: ${num20p}`;
-        output10.textContent = `Number of 10p coins: ${num10p}`;
+        output50.textContent = `Number of 50p coins in £${amount} is: ${num50p}`;
+        output20.textContent = `Number of 20p coins in £${amount} is: ${num20p}`;
+        output10.textContent = `Number of 10p coins in £${amount} is: ${num10p}`;
     }
 
 });
