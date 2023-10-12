@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JQuery Sandbox</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <div id="mast">
+        <h1 class="logo">JQuery Sandbox</h1>
+        <ul class="top_links">
+          <li class="themeOn">Theme On</li>
+          <li class="themeOff">theme Off</li>
+          <li class="box1">Box 1</li>
+          <li class="last_li box2">Box 2</li>
+        </ul>
+        <span>&copy;</span>
+      </div>
+    
+    </header>
+    <div class="wrapper">
+      <section id="top-section">
+        <ul>
+          <li class="static"></li>
+          <li class="jq_logo curs"><img src="images/jquery-logo.jpg"></li>
+          <li class="html_logo curs"><img src="images/html5-logo.png"></li>
+          <li class="css_logo curs"><img src="images/css3-logo.png"></li>
+          <li class="js_logo curs"><img src="images/javascript-logo.png"></li>
+        </ul>
+      </section>
+      <section id="div-section">
+        <ul>
+          <li>
+            <div class="left_div">Click to Remove CENTER div</div>
+          </li>
+          <li>
+            <div class="center_div">Click to Toggle ALL Paragraphs</div>
+          </li>
+          <li>
+            <div class="right_div">Click to Bring CENTER Div back</div>
+          </li>
+        </ul>
+      </section>
+      <section id="text-section">
+        <ul id="ptext">
+          <li class="task">
+              <p class="change">BOX 1</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+              volutpat libero.
+          </li>
+          <li class="task">
+                <p class="change">BOX 2</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+              volutpat libero. 
+          </li>
+          <li>
+                <p class="change">BOX 3</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+              volutpat libero.
+          </li>
+          <li>
+            <p>
+                <p class="change">BOX 4</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+              volutpat libero.
+            </p>
+          </li>
+          <li>
+                <p class="change">BOX 5</p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae
+              volutpat libero.
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <div id="footer">Click on this footer to remove the header</div>
+      </footer>
+      <div class="return-header">Click to bring back the header</div>
+    </div>
+    <!--END Wrapper-->
+    <!--JQuery starts here-->
+    <script src="jquery/jquery-3.2.1.js"></script>
+    <script src="js/demo.js"></script>
+  </body>
+</html>
