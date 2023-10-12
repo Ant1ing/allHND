@@ -12,7 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Validate form on submit
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        if (validateEmail(emailField.value) && validateUsername(usernameField.value)) {
+
+        let emailValid = validateEmail(emailField.value);
+        let usernameValid = validateUsername(usernameField.value);
+
+        if (emailValid && usernameValid) {
             window.location.href = 'subbed.html';
         }
     });
@@ -28,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Check email format
     function validateEmail(email) {
+        // Additional check for empty email field
+        if (email.trim() === '') {
+            emailError.textContent = 'Email cannot be empty.';
+            return false;
+        }
+
         // Thank you stack overflow for this i was searching for a while trying to figure out how to validate it XD
         let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         if (emailPattern.test(email)) {
@@ -41,7 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Check username (only letters and numbers)
     function validateUsername(username) {
-        // Same with this one it just makes sure no aditional symbols can be added to the username or email to make sure it follows the requirements
+        // Additional check for empty username field
+        if (username.trim() === '') {
+            unameError.textContent = 'Username cannot be empty.';
+            return false;
+        }
+
+        // Same with this one it just makes sure no additional symbols can be added to the username or email to make sure it follows the requirements
         let usernamePattern = /^[a-zA-Z0-9]+$/;
         if (usernamePattern.test(username)) {
             unameError.textContent = '';

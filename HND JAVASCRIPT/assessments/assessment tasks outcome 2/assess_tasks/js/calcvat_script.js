@@ -1,12 +1,13 @@
 // Wait for the HTML document to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     // Get references to elements from the page
     const calcButton = document.getElementById('calcbtn');
     const resetButton = document.getElementById('reset');
     const amountInput = document.getElementById('amount');
     const vatInput = document.getElementById('vat');
     const totalInput = document.getElementById('total');
+    const errorMessage = document.getElementById('errorMessage');
 
     // Attach a click event to the 'Calculate VAT' button
     calcButton.addEventListener('click', function() {
@@ -25,11 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
     function calculateVAT(amount) {
         // Set the VAT rate
         let vatRate = 0.22;
-        
-        // Validate the amount to make sure its not left empty or an incorrect value was entered such as "four" instead of 4.
+
+        // Validate the amount
         if(isNaN(amount) || amount.trim() === '') {
-            alert('Please enter a valid amount.');
+            // Instead of using alert, update the errorMessage div
+            errorMessage.textContent = 'Please enter a valid amount.';
             return;
+        } else {
+            errorMessage.textContent = ''; // Clear error message if input is valid
         }
         
         // Calculate VAT and Grand Total
@@ -44,10 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to reset all input fields.
     function resetFields() {
         let inputs = document.querySelectorAll('.details');
-        
+
         // Loop through each input and reset its value
         for(let input of inputs) {
             input.value = '';
         }
+        errorMessage.textContent = ''; // Clear error message when resetting
     }
 });

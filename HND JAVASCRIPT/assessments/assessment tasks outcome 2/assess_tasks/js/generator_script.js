@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Display the counter
         counterOutput.textContent = buttonClickCounter;
 
-        // Display the appropriate message based on the random number
-        if (randNum < 13) {
-            greaterLessOutput.textContent = `The number generated ${randNum} is less than 13`;
-        } else if (randNum > 13) {
-            greaterLessOutput.textContent = `The number generated ${randNum} is greater than 13`;
-        } else {
-            greaterLessOutput.textContent = `The number generated ${randNum} is equal to 13`;
+        // Display the appropriate message based on the random number using logical operators
+        if (randNum > 0 && randNum < 13) {
+            greaterLessOutput.textContent = ` ${randNum} and is less than 13`;
+        } else if (randNum > 13 && randNum <= 26) {
+            greaterLessOutput.textContent = ` ${randNum} and is greater than 13`;
+        } else if (randNum === 13) {
+            greaterLessOutput.textContent = ` ${randNum} and is equal to 13`;
         }
 
         // Display the corresponding image from the alphabet
