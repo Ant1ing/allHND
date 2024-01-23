@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3 - Body Builder Puzzle Adventure</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./modules/jquery-3.7.1.js"></script>
+    <script src="./modules/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="level-container">
+        <div class="levelheader">
+            <h3 class="level-name">Level 3 - Body Builder Puzzle Adventure</h3>
+            <div class="stars-container" id="stars-container"></div>
+        </div>
+
+        <div class="game-container">
+            <div class="asset-container">
+                <!-- Image of the character before assembly -->
+                <img class="asset asset-before" id="assetBefore" src="./images/limbs/asset3before.png" alt="Character Before">
+                <!-- Image of the character after assembly -->
+                <img class="asset asset-after" id="assetAfter" src="./images/limbs/asset3.png" alt="Character After" style="display: none;">
+                
+                <!-- Slots for limbs -->
+                <div class="slot" id="slot9" data-slot-number="1"></div>
+                <div class="slot" id="slot10" data-slot-number="2"></div>
+                <div class="slot" id="slot11" data-slot-number="3"></div>
+                <div class="slot" id="slot12" data-slot-number="4"></div>
+            </div>
+
+            <!-- Draggable limbs -->
+            <div class="limb-row">
+                <img id="limb9" class="limb" src="./images/limbs/limb9.png" alt="Limb 9" data-limb-number="1">
+                <img id="limb10" class="limb" src="./images/limbs/limb10.png" alt="Limb 10" data-limb-number="2">
+                <img id="limb11" class="limb" src="./images/limbs/limb12.png" alt="Limb 11" data-limb-number="3">
+                <img id="limb12" class="limb" src="./images/limbs/limb11.png" alt="Limb 12" data-limb-number="4">
+            </div>
+            
+            <div class="continue">
+                <button id="continueButton" class="next" data-next-level="level4.html" style="display: none;">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/level.js"></script>
+</body>
+</html>
