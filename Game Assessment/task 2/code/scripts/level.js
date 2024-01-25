@@ -9,7 +9,10 @@ $(document).ready(function() {
         const playerName = localStorage.getItem('playerName');
         if (playerName) {
             // Update the greeting container with the player's name
-            $('#greeting-container').html(`<h2>Hello, ${playerName} 👋</h2>`);
+            const greetingContainer = document.getElementById('greeting-container');
+            if (greetingContainer) {
+                greetingContainer.innerHTML = `<h2>Hello, ${playerName} 👋</h2>`;
+            }
         }
     }
 
@@ -104,4 +107,5 @@ $(document).ready(function() {
     // Initialize the game by displaying player name and setting up game elements
     displayPlayerName();
     initializeGameElements();
+    
 });

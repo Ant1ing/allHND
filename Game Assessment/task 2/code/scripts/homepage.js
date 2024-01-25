@@ -14,15 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Save player's name in local storage.
+function startGame() {
+    storeName(); // Store the player's name first
+    window.location.href = 'instructions.html'; // Then navigate to the instructions page
+}
+
+// Save player's name in local storage.
 function storeName() {
     const playerName = document.getElementById('player-name').value;
     localStorage.setItem('playerName', playerName);
     console.log(`Name stored: ${playerName}`);
-}
-
-// Function to start the game.
-function startGame() {
-    selectLevel(selectedLevel);
 }
 
 // Show level selector screen and load stars.

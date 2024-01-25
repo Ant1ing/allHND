@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <title>Instructions - Body Builder Puzzle Adventure</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="level-container">
+        <div class="Instructions">
+            <h1 class="level-name">Instructions</h3>
+        </div>
+        <div id="greeting-container"></div>
+        <div class="instructions-content">
+            
+            <p>Welcome to Body Builder Puzzle Adventure!</p>
+            <p>In this game, you will assemble various body parts to complete a character. Each level will have a set of body parts that need to be dragged and dropped into the correct positions.</p>
+            <p>Here are some tips to get started:</p>
+            <ul>
+                <li>Drag each body part to its matching outline.</li>
+                <li>Correctly placed parts will snap into place.</li>
+                <li>Complete the character to earn stars and advance to the next level.</li>
+            </ul>
+            <p>Have fun and good luck!</p>
+        </div>
+
+        <div class="continue">
+            <button id="continue-to-level1-btn" class="next">Continue</button>
+        </div>
+    </div>
+    <script src="./scripts/level.js"></script>
+
+    <script>
+        // Event listener for the continue button
+        document.getElementById('continue-to-level1-btn').addEventListener('click', function() {
+            window.location.href = 'level1.html';
+        });
+    </script>
+</body>
+</html>

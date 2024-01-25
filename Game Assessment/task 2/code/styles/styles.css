@@ -69,6 +69,42 @@ body {
 .star-icon {
   max-width: 30px;
   max-height: 30px;
+  position: absolute;
+  margin-top: 25px;
+}
+
+.starsForLevels {
+  margin-left: -20px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: white;
+}
+
+.instructions-content {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: white;
+}
+
+#continue-to-level1-btn {
+  margin: 20px;
+  background-color: #ffafa3;
+  border-radius: 42px;
+  border: 3px solid #ff6973;
+  display: inline-block;
+  cursor: pointer;
+  color: #15788c;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 10px 14px;
+  text-decoration: none;
 }
 
 /* Level-specific styles */
@@ -225,4 +261,20 @@ body {
 #slot12 {
   top: 490px; /* Adjust the top position for shoe 2 */
   left: 320px; /* Adjust the left position for shoe 2 */
+}
+#slot13 {
+  top: 440px; /* Adjust the top position for shoe 2 */
+  left: 450px; /* Adjust the left position for shoe 2 */
+}
+#slot14 {
+  top: 320px; /* Adjust the top position for shoe 2 */
+  left: 65px; /* Adjust the left position for shoe 2 */
+}
+#slot15 {
+  top: 90px; /* Adjust the top position for shoe 2 */
+  left: 110px; /* Adjust the left position for shoe 2 */
+}
+#slot16 {
+  top: 190px; /* Adjust the top position for shoe 2 */
+  left: 400px; /* Adjust the left position for shoe 2 */
 }
