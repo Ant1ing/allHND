@@ -147,6 +147,8 @@ body {
 #greeting-container {
   color: white;
   margin: 0px;
+  font-size: 20px;
+  max-height: 50px;
 }
 
 .level-name {
@@ -180,7 +182,9 @@ body {
 }
 
 .limb {
-  margin: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px;
   width: 50px;
   height: 50px;
   background-color: #6b869638;
@@ -215,66 +219,116 @@ body {
 }
 
 #slot1 {
-  top: 280px; /* Adjust the top position for eyebrows */
-  left: 265px; /* Adjust the left position for eyebrows */
+  top: 38%; /* Adjust the top position for eyebrows */
+  left: 45%; /* Adjust the left position for eyebrows */
 }
 #slot2 {
-  top: 330px; /* Adjust the top position for eyes */
-  left: 265px; /* Adjust the left position for eyes */
+  top: 50%; /* Adjust the top position for eyes */
+  left: 45%; /* Adjust the left position for eyes */
 }
 #slot3 {
-  top: 400px; /* Adjust the top position for nose */
-  left: 265px; /* Adjust the left position for nose */
+  top: 60%; /* Adjust the top position for nose */
+  left: 45%; /* Adjust the left position for nose */
 }
 #slot4 {
-  top: 450px; /* Adjust the top position for mouth */
-  left: 265px; /* Adjust the left position for mouth */
+  top: 75%; /* Adjust the top position for mouth */
+  left: 45%; /* Adjust the left position for mouth */
 }
 #slot5 {
-  top: 250px; /* Adjust the top position for heart */
-  left: 345px; /* Adjust the left position for heart */
+  top: 40%; /* Adjust the top position for heart */
+  left: 60%; /* Adjust the left position for heart */
 }
 #slot6 {
-  top: 300px; /* Adjust the top position for lungs */
-  left: 265px; /* Adjust the left position for lungs */
+  top: 50%; /* Adjust the top position for lungs */
+  left: 45%; /* Adjust the left position for lungs */
 }
 #slot7 {
-  top: 450px; /* Adjust the top position for stomach */
-  left: 265px; /* Adjust the left position for stomach */
+  top: 70%; /* Adjust the top position for stomach */
+  left: 45%; /* Adjust the left position for stomach */
 }
 #slot8 {
-  top: 140px; /* Adjust the top position for ribs */
-  left: 265px; /* Adjust the left position for ribs */
+  top: 30%; /* Adjust the top position for ribs */
+  left: 45%; /* Adjust the left position for ribs */
 }
 #slot9 {
-  top: 350px; /* Adjust the top position for calf 1 */
-  left: 200px; /* Adjust the left position for calf 1 */
+  top: 58%; /* Adjust the top position for calf 1 */
+  left: 35%; /* Adjust the left position for calf 1 */
 }
 #slot10 {
-  top: 350px; /* Adjust the top position for calf 2 */
-  left: 320px; /* Adjust the left position for calf 2 */
+  top: 58%; /* Adjust the top position for calf 2 */
+  left: 55%; /* Adjust the left position for calf 2 */
 }
 #slot11 {
-  top: 490px; /* Adjust the top position for shoe 1 */
-  left: 200px; /* Adjust the left position for shoe 1 */
+  top: 85%; /* Adjust the top position for shoe 1 */
+  left: 35%; /* Adjust the left position for shoe 1 */
 }
 #slot12 {
-  top: 490px; /* Adjust the top position for shoe 2 */
-  left: 320px; /* Adjust the left position for shoe 2 */
+  top: 85%; /* Adjust the top position for shoe 2 */
+  left: 55%; /* Adjust the left position for shoe 2 */
 }
 #slot13 {
-  top: 440px; /* Adjust the top position for shoe 2 */
-  left: 450px; /* Adjust the left position for shoe 2 */
+  top: 78%; /* Adjust the top position for shoe 2 */
+  left: 79%; /* Adjust the left position for shoe 2 */
 }
 #slot14 {
-  top: 320px; /* Adjust the top position for shoe 2 */
-  left: 65px; /* Adjust the left position for shoe 2 */
+  top: 55%; /* Adjust the top position for shoe 2 */
+  left: 10%; /* Adjust the left position for shoe 2 */
 }
 #slot15 {
-  top: 90px; /* Adjust the top position for shoe 2 */
-  left: 110px; /* Adjust the left position for shoe 2 */
+  top: 15%; /* Adjust the top position for shoe 2 */
+  left: 20%; /* Adjust the left position for shoe 2 */
 }
 #slot16 {
-  top: 190px; /* Adjust the top position for shoe 2 */
-  left: 400px; /* Adjust the left position for shoe 2 */
+  top: 32%; /* Adjust the top position for shoe 2 */
+  left: 67%; /* Adjust the left position for shoe 2 */
+}
+
+/* Responsive adjustments for tablet and mobile */
+@media screen and (max-width: 1024px) {
+  /* Tablet adjustments */
+  .levelheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+  }
+  .level-container {
+    display: flex;
+    align-items: center;
+  }
+  .game-container {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .slot {
+    width: 30px;
+    height: 30px;
+  }
+
+  .limb {
+    width: 35px;
+    height: 35px;
+  }
+
+  .limb-row {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #assetBefore {
+    max-width: 90%;
+  }
+  #assetAfter {
+    max-width: 90%;
+  }
+
+  .instructions-content {
+    font-size: 22px;
+  }
+
+  .level-container {
+    width: 70%; /* Adjust width for tablet screens */
+    padding: 20px; /* Adjust padding */
+  }
 }
