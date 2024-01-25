@@ -111,7 +111,7 @@ body {
 .level-container {
   text-align: center;
   width: 600px;
-  height: 800px;
+  height: 90%;
   margin: 0 auto;
   padding: 30px;
   background-color: #15788c6b;
@@ -328,7 +328,18 @@ body {
   }
 
   .level-container {
-    width: 70%; /* Adjust width for tablet screens */
-    padding: 20px; /* Adjust padding */
+    width: 80%; /* Adjust width for tablet screens */
+    max-height: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .level-container {
+    width: 100%; /* Adjust width for tablet screens */
+    max-height: 90%;
+  }
+  .game-container {
+    width: 100%;
+    justify-content: center;
   }
 }
