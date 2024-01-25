@@ -1,65 +1,107 @@
 $(document).ready(function() {
-    $('.level-container').each(function() {
-        const levelContainer = $(this); // Current level container
-        const starsContainer = levelContainer.find('.stars-container');
-        const continueButton = levelContainer.find('.continue button');
-        const assetBefore = levelContainer.find('.asset-before');
-        const assetAfter = levelContainer.find('.asset-after');
-        const slots = levelContainer.find('.slot');
-        const limbs = levelContainer.find('.limb');
-        let correctPlacements = 0;
+    // Arrays to store the limb and slot elements and their associated data
+    const limbs = [];
+    const slots = [];
+    let correctPlacements = 0; // Counter to track the number of correctly placed limbs
 
-        limbs.draggable({
-            revert: 'invalid',
-            start: function(event, ui) {
-                $(this).css('z-index', '10');
-            },
-            stop: function(event, ui) {
-                $(this).css('z-index', '1');
-            }
+    // Function to display the player's name, retrieved from local storage
+    function displayPlayerName() {
+        const playerName = localStorage.getItem('playerName');
+        if (playerName) {
+            // Update the greeting container with the player's name
+            $('#greeting-container').html(`<h2>Hello, ${playerName} 👋</h2>`);
+        }
+    }
+
+    // Function to initialize limbs and slots by selecting elements with class 'limb' and 'slot'
+    function initializeGameElements() {
+        $('.limb').each(function() {
+            // Store each limb element and its corresponding data-limb-number
+            const limbNumber = $(this).data('limb-number');
+            limbs.push({ element: $(this), number: limbNumber });
         });
 
-        slots.droppable({
-            tolerance: 'intersect',
-            drop: function(event, ui) {
-                const droppedLimb = ui.draggable;
-                const limbNumber = droppedLimb.data('limb-number');
-                const slotNumber = $(this).data('slot-number');
+        $('.slot').each(function() {
+            // Store each slot element and its corresponding data-slot-number
+            const slotNumber = $(this).data('slot-number');
+            slots.push({ element: $(this), number: slotNumber });
+        });
 
-                if (limbNumber === slotNumber) {
-                    correctPlacements++;
-                    updateStars(starsContainer, 'images/star2.png');
-                    
-                    droppedLimb.position({ of: $(this), my: 'left top', at: 'left top' });
-                    droppedLimb.draggable('disable');
+        // Setup draggable and droppable functionality for limbs and slots
+        setupDragAndDrop();
+    }
 
-                    checkCompletion();
+    // Function to enable drag and drop functionality
+    function setupDragAndDrop() {
+        // Make each limb draggable
+        limbs.forEach(limb => {
+            limb.element.draggable({
+                revert: 'invalid', // Limb reverts to original position if not placed correctly
+                start: function() { $(this).css('z-index', '10'); }, // Bring to front when dragging
+                stop: function() { $(this).css('z-index', '1'); } // Reset z-index after dragging
+            });
+        });
+
+        // Make each slot droppable
+        slots.forEach(slot => {
+            slot.element.droppable({
+                tolerance: 'intersect', // Limb must intersect with slot to be considered a drop
+                accept: function(draggable) {
+                    // Only accept limb if its data matches the slot number
+                    return slot.number === draggable.data('limb-number');
+                },
+                drop: function(event, ui) {
+                    // Handle the limb drop event
+                    const droppedLimb = ui.draggable;
+                    // Check if the dropped limb matches the slot
+                    if (slot.number === droppedLimb.data('limb-number')) {
+                        alignLimbToSlot(droppedLimb, slot.element); // Align limb to slot
+                        correctPlacements++; // Increment correct placement count
+                        updateStars('images/star2.png'); // Add a star for each correct placement
+                        checkCompletion(); // Check if all limbs are placed correctly
+                    }
                 }
-            }
+            });
         });
+    }
 
-        function updateStars(container, imagePath) {
-            const star = $('<img>').attr('src', imagePath).addClass('star');
-            container.append(star);
-        }
+    // Function to add a star to the stars container
+    function updateStars(imagePath) {
+        const star = $('<img>').attr('src', imagePath).addClass('star');
+        $('#stars-container').append(star);
+    }
 
-        function checkCompletion() {
-            if (correctPlacements === limbs.length) {
-                assetBefore.hide();
-                slots.hide();
-                limbs.hide();
-                assetAfter.show();
-                continueButton.show();
-            }
-        }
-
-        continueButton.click(function() {
-            const nextLevel = $(this).data('next-level');
-            if (nextLevel) {
-                window.location.href = nextLevel; // Navigate to the next level
-            } else {
-                console.log('No next level specified.');
-            }
+    // Function to align the limb to the center of the slot and disable further dragging
+    function alignLimbToSlot(limb, slot) {
+        limb.position({ 
+            my: "center", 
+            at: "center", 
+            of: slot 
         });
+        limb.draggable('disable'); // Disable dragging of the limb after it's correctly placed
+    }
+
+    // Function to check if all limbs have been correctly placed
+    function checkCompletion() {
+        if (correctPlacements === limbs.length) {
+            // Hide 'before' image, slots, and limbs, then show 'after' image and continue button
+            $('.asset-before').hide();
+            $('.slot').hide();
+            $('.limb').hide();
+            $('.asset-after').show();
+            $('#continueButton').show();
+        }
+    }
+
+    // Event handler for the continue button to navigate to the next level
+    $('#continueButton').click(function() {
+        const nextLevel = $(this).data('next-level');
+        if (nextLevel) {
+            window.location.href = nextLevel; // Redirect to the URL of the next level
+        } 
     });
+
+    // Initialize the game by displaying player name and setting up game elements
+    displayPlayerName();
+    initializeGameElements();
 });

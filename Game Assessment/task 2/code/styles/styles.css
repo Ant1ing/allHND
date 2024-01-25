@@ -9,6 +9,7 @@ body {
   height: 100vh;
   background-image: url("../images/background3.png");
   background-size: cover;
+  /* Sets up global styling including font, layout, full viewport height, and background */
 }
 
 /* Header styles */
@@ -23,6 +24,7 @@ body {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* Styles for the header, including font size, weight, and a gradient background */
 }
 
 /* Common styles for start page and level chooser */
@@ -32,10 +34,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Shared styles for the start page and level chooser, setting up layout and alignment */
 }
 
 #level-chooser {
   display: none;
+  /* Initially hides the level chooser */
 }
 
 /* Button styles for start page and level chooser */
@@ -53,11 +57,18 @@ body {
   font-weight: bold;
   padding: 10px 14px;
   text-decoration: none;
+  /* Styling for buttons, including margins, colors, and typography */
 }
 
 #start-page button:hover,
 #level-chooser button:hover {
   background-color: #ffeecc;
+  /* Hover effect for buttons */
+}
+
+.star-icon {
+  max-width: 30px;
+  max-height: 30px;
 }
 
 /* Level-specific styles */
@@ -66,19 +77,40 @@ body {
   width: 600px;
   height: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
   background-color: #15788c6b;
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border: 3px solid #ff6973;
   display: flex;
-  flex-direction: column; /* Updated to column layout */
+  flex-direction: column;
+  /* Container styling for each level, including dimensions, background, and box model properties */
 }
 
 .levelheader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#player-name {
+  margin: 20px;
+  background-color: #ffeecc;
+  border-radius: 42px;
+  border: 3px solid #ff6973;
+  display: inline-block;
+  cursor: pointer;
+  color: #15788c;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+#greeting-container {
+  color: white;
+  margin: 0px;
 }
 
 .level-name {
@@ -127,10 +159,11 @@ body {
   position: absolute; /* Position the slots relative to the container */
   width: 50px;
   height: 50px;
-  border: 3px dashed #ff0000; /* Adjust as needed */
+  border: 3px dashed #ff0000;
 }
 
 #continueButton {
+  /*Just follows the same idea as the other buttons*/
   margin: 20px;
   background-color: #ffafa3;
   border-radius: 42px;
@@ -162,34 +195,34 @@ body {
   left: 265px; /* Adjust the left position for mouth */
 }
 #slot5 {
-  top: 250px; /* Adjust the top position for mouth */
-  left: 345px; /* Adjust the left position for mouth */
+  top: 250px; /* Adjust the top position for heart */
+  left: 345px; /* Adjust the left position for heart */
 }
 #slot6 {
-  top: 300px; /* Adjust the top position for mouth */
-  left: 265px; /* Adjust the left position for mouth */
+  top: 300px; /* Adjust the top position for lungs */
+  left: 265px; /* Adjust the left position for lungs */
 }
 #slot7 {
-  top: 450px; /* Adjust the top position for mouth */
-  left: 265px; /* Adjust the left position for mouth */
+  top: 450px; /* Adjust the top position for stomach */
+  left: 265px; /* Adjust the left position for stomach */
 }
 #slot8 {
-  top: 140px; /* Adjust the top position for mouth */
-  left: 265px; /* Adjust the left position for mouth */
+  top: 140px; /* Adjust the top position for ribs */
+  left: 265px; /* Adjust the left position for ribs */
 }
 #slot9 {
-  top: 350px; /* Adjust the top position for mouth */
-  left: 200px; /* Adjust the left position for mouth */
+  top: 350px; /* Adjust the top position for calf 1 */
+  left: 200px; /* Adjust the left position for calf 1 */
 }
 #slot10 {
-  top: 350px; /* Adjust the top position for mouth */
-  left: 320px; /* Adjust the left position for mouth */
+  top: 350px; /* Adjust the top position for calf 2 */
+  left: 320px; /* Adjust the left position for calf 2 */
 }
 #slot11 {
-  top: 490px; /* Adjust the top position for mouth */
-  left: 200px; /* Adjust the left position for mouth */
+  top: 490px; /* Adjust the top position for shoe 1 */
+  left: 200px; /* Adjust the left position for shoe 1 */
 }
 #slot12 {
-  top: 490px; /* Adjust the top position for mouth */
-  left: 320px; /* Adjust the left position for mouth */
+  top: 490px; /* Adjust the top position for shoe 2 */
+  left: 320px; /* Adjust the left position for shoe 2 */
 }
