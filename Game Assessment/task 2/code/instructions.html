@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic page setup with character encoding and viewport settings -->
     <meta charset="UTF-8">
     <meta viewport="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the web page -->
     <title>Instructions - Body Builder Puzzle Adventure</title>
+
+    <!-- Linking external CSS for styling -->
     <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- Including jQuery and jQuery UI libraries for interactive features -->
     <script src="./modules/jquery-3.7.1.js"></script>
     <script src="./modules/jquery-ui.js"></script>
 </head>
 <body>
+    <!-- Main container for the level's content -->
     <div class="level-container">
+        <!-- Container for the instructions header -->
         <div class="Instructions">
             <h1 class="level-name">Instructions</h1>
         </div>
+
+        <!-- Placeholder for dynamic content, possibly for greetings or notifications -->
         <div id="greeting-container"></div>
+
+        <!-- Instructions content section -->
         <div class="instructions-content">
-            
             <p>Welcome to Body Builder Puzzle Adventure!</p>
             <p>In this game, you will assemble various body parts to complete a character. Each level will have a set of body parts that need to be dragged and dropped into the correct positions.</p>
             <p>Here are some tips to get started:</p>
@@ -27,14 +39,18 @@
             <p>Have fun and good luck!</p>
         </div>
 
+        <!-- Button to proceed to the next level -->
         <div class="continue">
             <button id="continue-to-level1-btn" class="next">Continue</button>
         </div>
     </div>
+
+    <!-- External script for level-specific functionalities -->
     <script src="./scripts/level.js"></script>
 
+    <!-- Script for handling the continue button click event -->
     <script>
-        // Event listener for the continue button
+        // Adding click event listener to the continue button to navigate to the next level
         document.getElementById('continue-to-level1-btn').addEventListener('click', function() {
             window.location.href = 'level1.html';
         });
