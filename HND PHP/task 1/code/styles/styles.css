@@ -1,0 +1,88 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: #E5E7EB; /* Tailwind gray-200 */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-weight: bold;
+  }
+
+  
+  
+  .nav-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    color: #374151; /* Tailwind gray-700 */
+    text-decoration: none;
+  }
+  
+  .search-bar {
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #D1D5DB; /* Tailwind gray-300 */
+  }
+  
+  .login {
+    margin-left: 1rem;
+  }
+  
+  .banner {
+    background-color: #CBD5E1; /* Tailwind blue-300 */
+    height: 200px; /* Placeholder height for the banner */
+  }
+  
+  .main-content {
+    padding: 2rem;
+    background-color: #EBF1F5; /* Lighter shade for the background */
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+  }
+
+  .rightHand{
+    display:flex;
+    flex-direction:column;
+  }
+  
+  .new-arrivals, .autumn-offers, .featured-artist {
+    margin-bottom: 2rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  
+  .offer, .artist {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .item, .offer, .artist {
+    border: 1px solid #D1D5DB; /* Tailwind gray-300 */
+  }
+  
+  .item img, .offer img, .artist img {
+    width: 100%;
+    display: block;
+  }
+  
+  .footer {
+    background-color: #E5E7EB; /* Tailwind gray-200 */
+    padding: 1rem;
+    text-align: center;
+  }

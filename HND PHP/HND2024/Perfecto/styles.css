@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/*------------------------TEXT STYLES--------------------------*/
+
+body {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: darkslategrey;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+h4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    background-color: cornflowerblue;
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+/*------------------------END OF TEXT STYLES--------------------------*/
+
+
+/*-------------------------CONTAINER STYLES---------------------------*/
+
+main {
+    display: block;
+    border: 1px solid darkslategrey;
+    margin-top: 0px;
+    background-image: url(images/glassSculpture.jpg);
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+
+article {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+
+
+/*---------------------END OF CONTAINER STYLES--------------------*/
+
+
+/*-------------------------CLASS STYLES---------------------------*/
+
+.main-content {
+    max-width:1200px;
+    text-align:center;
+    margin:auto;
+    padding: 2rem;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+
+
+  .rightHand{
+    display:flex;
+    flex-direction:column;
+  }
+  
+  .new-arrivals, .autumn-offers, .featured-artist {
+    margin-bottom: 2rem;
+  }
+
+  .new-arrivals h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .item img {
+    width: 100%;
+    display: block;
+  }
+  
+  .offer, .artist {
+    display: flex;
+    justify-content: center;
+    width:300px;
+    height:300px;
+    margin:50px;
+  }
+  
+  .item, .offer, .artist {
+    border: 1px solid #D1D5DB; /* Tailwind gray-300 */
+  }
+  
+  .item img, .offer img, .artist img {
+    width: 100%;
+    display: block;
+  }
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.registerSection {
+    width: 100%;
+   min-height:100vh;
+}
+
+.registerForm {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm {
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formField {
+    padding: 10px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    width: 300px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.formSubmit {
+    padding: 10px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+     font-size: 1.2em;
+    margin-bottom: 20px;
+    width: 150px;
+    text-align: center;
+    background-color: cornflowerblue;
+    color: #fff;
+    margin-top: 5px;
+}
+
+input::placeholder {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: lightgray;
+    font-size: 1.2em;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav.left {
+    width: 70%;
+    background-color: #fff;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav.right {
+    margin: 5px;
+    width: 30%;
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-end;
+}
+
+
+
+.psBlue {
+    width: 100%;
+    height: 10px;
+    background-color: cornflowerblue;
+    border: none;
+}
+
+
+/*--------------------END OF CLASS STYLES---------------------*/
+
+
+/*-----------------NAVIGATION & LINKS STYLES------------------*/
+
+nav a {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    border-right: 1px solid #000;
+}
+
+nav a:link,
+nav a:visited {
+    color: darkslategray;
+}
+
+nav a:hover {
+    color: darkgrey;
+    text-decoration: underline;
+}
+
+
+/*-----------------END OF NAVIGATION & LINKS STYLES------------------*
+
+
+@media screen and (max-width: 850px) {
+    .left {
+        width: 50%;
+    }
+    .right {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .left {
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo {
+        width: 200px;
+        height: 80px;
+    }
+    .imageright{
+   display: none;
+}
+ 
+    header {
+        width: 100%;
+        display: block;
+        padding-left: 0px;
+        padding-right: 10%;
+    }
+    .header-content {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        padding-left: 30px;
+    }
+    .sm {
+        width: 40px;
+        height: 40px;
+    }
+    article {
+        display: block;
+    }
+    section {
+        width: 100%;
+    }
+    nav {
+        flex-flow: column wrap;
+    }
+    nav a {
+        padding: 0px;
+        margin-right: 0px;
+    }
+    nav a {
+        background-color: #fff;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px green solid;
+        border-right: none;
+        width: auto;
+    }
+    main {
+ 
+    background-image: none;
+  
+}
+    .left, .right{
+  
+    margin: 0px;
+}
+
+
+
+}*/
